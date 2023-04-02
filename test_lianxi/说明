@@ -1,0 +1,37 @@
+1.创建scrapy项目
+在终端输入：scrapy startproject 项目名
+
+2.切换到spiders文件夹中，代码都放在这里
+
+3.创建爬虫文件
+在终端输入：scrapy genspider 爬虫文件名 要爬取网页
+eg: scrapy genspider baidu http://www.baidu.com
+一般情况下不要加http协议，文件里自动有
+
+4.运行爬虫代码
+终端输入：scrapy crawl 爬虫名
+
+在setttings.py文件中把（robots协议）君子协议ROBOTSTXT_OBEY = True注释掉，否则不允许爬虫
+
+=========================================================================================
+
+1.scrapy数据结构
+   项目名
+      项目名
+          spiders文件夹（存储爬虫文件）
+                __init__.py
+                自定义爬虫文件       核心功能文件*****
+          __init__.py
+          items.py             定义数据结构的地方，爬取的数据包含哪些
+          middlewares.py       中间件    代理
+          pipelines.py         用来处理下载的数据
+          settings.py          配置文件
+
+
+2.response的属性和方法
+    response.text       获取的是响应的字符串
+    response.body       获取的是二进制数据
+    response.xpath      可以直接是xpath方法来解析response中的内容
+    response.extract()  提取seletor对象的data属性值
+    response.extract_first() 提取的seletor列表的第一个数据
+

@@ -1,0 +1,2 @@
+爬取当当网青春爱情文学的所有图书图片，价格，名称
+URL=http://category.dangdang.com/cp01.01.02.00.00.00.html
